@@ -1,0 +1,63 @@
+.book-preview {
+  margin: 25px;
+  border: 1px dashed #dfdfdf;
+  width: 600px;
+}
+
+.book-preview-image {
+  float: left;
+  width: 180px;
+}
+
+.book-preview-image img {
+  width: 180px;
+  height: 180px;
+}
+
+.book-preview-text {
+  float: left;
+  width: 400px;
+  margin: 10px;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+@keyframes slideOutRight {
+  to {transform: translateX(100%);}
+}
+
+@keyframes slideOutLeft {
+  to {transform: translateX(-100%);}
+ }
+
+@keyframes slideInRight {
+  from {transform: translateX(100%);}
+  to {transform: translateX(0);}
+}
+
+@keyframes slideInLeft {
+  from {transform: translateX(-100%);}
+  to {transform: translateX(0);}
+}
+
+.master-view.ng-enter {
+  animation: slideInLeft 0.25s linear;
+  animation-fill-mode: both;
+}
+
+.master-view.ng-leave {
+  animation: slideOutLeft 0.25s linear;
+  animation-fill-mode: both;
+}
+
+.detail-view.ng-enter {
+  animation: slideInRight 0.25s linear;
+  animation-fill-mode: both;
+}
+
+.detail-view.ng-leave {
+  animation: slideOutRight 0.25s linear;
+  animation-fill-mode: both;
+}

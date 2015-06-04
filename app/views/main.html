@@ -1,0 +1,11 @@
+<select ng-model="currentOption"
+        ng-options="key for (key, value) in options"
+        ng-change="currentOption()">
+
+</select>
+
+<div ng-repeat="book in books"
+     ng-include="book.templateUrl">
+</div>
+
+
